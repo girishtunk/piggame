@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  background-image: linear-gradient(to right, #3498db, #e74c3c);
+}
+
+.container-fluid {
+  height: 100vh;
+  position: relative;
+  display: block;
+}
+
+.col-9.main-box {
+  position: absolute;
+  background-color: #f2f2f2;
+  height: auto;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid #000;
+  box-shadow: 2px 4px 5px;
+  border-radius: 3px;
+}
+
+[class*="side-"] {
+  text-align: center;
+}
+
+.player-name {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  margin-top: 4rem;
+  letter-spacing: 2px;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+.player-score {
+  font-size: 6rem;
+  margin-bottom: 3rem;
+  padding: 1rem 1.5rem;
+  color: #34495e;
+  font-weight: 100;
+}
+
+.active { background-color: #f7f7f7; }
+.active .player-name,.active .player-score { font-weight: 300; }
+
+.active .player-name::after {
+  content: "\2022";
+  font-size: 47px;
+  position: absolute;
+  color: #EB4D4D;
+  top: -7px;
+  right: 10px;
+
+}
+
+.current-box {
+  background-color: #e74c3c;
+  height: 6rem;
+  width: 30%;
+  margin: auto;
+  border-radius: 3px;
+  margin-bottom: 6rem;
+}
+
+.current-label {
+  margin-top: .7rem;
+  text-transform: uppercase;
+  color:#ecf0f1;
+  font-weight: 100;
+  margin-bottom: .2rem;
+  display: inline-block;
+}
+
+.current-score {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.modal-header {
+  padding: 0.5rem;
+}
+
+.modal-body {
+  padding: 1rem 1.5rem;
+}
+
+[class*="cbtn-"], .dice {
+  position: absolute;
+  left:50%;
+  display: block;
+  transform: translateX(-50%);
+}
+
+[class*="cbtn-"] {
+  border: none;
+  background: none;
+  font-size: 1.7rem;
+  font-family: 'Titillium Web', sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  transition: .3s ease-in-out;;
+}
+
+button i {
+  margin-right: 5px;
+  font-size: 1rem;
+  font-weight: lighter;
+  display: inline-block;
+  vertical-align: text-top;
+  margin-top: 14px;
+}
+
+[class*="cbtn-"]:hover {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.cbtn-new-game { top: 45px;}
+.cbtn-roll { top: 403px;}
+.cbtn-hold { top: 467px;}
+
+.btn-rules {
+  position: fixed;
+  top:1rem;
+  left:0.5rem;
+}
+
+.dice {
+  width: 125px;
+  top: 40%;
+}

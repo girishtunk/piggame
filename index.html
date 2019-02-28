@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <title>PIG Game</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col-9 main-box ">
+          <div class="row ">
+            <div class="col side-1 active" id="side-1">
+              <div class="player-name">Player 1</div>
+              <div class="player-score" id="totalScore_1">50</div>
+              <div class="current-box">
+                <div class="current-label">Current</div>
+                <div class="current-score" id="currentScore_1">10</div>
+              </div>
+            </div>
+
+            <div class="col side-2" id="side-2">
+              <div class="player-name">Player 2</div>
+              <div class="player-score" id="totalScore_2">30</div>
+              <div class="current-box">
+                <div class="current-label">Current</div>
+                <div class="current-score" id="currentScore_2">15</div>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="cbtn-new-game" type="button" name="new-game" onclick="start()"><i class="fas fa-plus"> </i>New Game</button>
+          <button class="cbtn-roll" type="button" name="roll" onclick="roll()"><i class="fas fa-sync"></i> Roll</button>
+          <button class="cbtn-hold" onclick="hold()"> <i class="fas fa-angle-double-down"></i> Hold</button>
+
+          <img src="assets/files/dice-6.png" alt="dice" class="dice" id="dice">
+          <audio id="diceSound">
+            <source src="assets/files/dice.mp3" type="audio/mpeg">
+          </audio>
+
+
+        </div>
+        <div class="col">
+        </div>
+      </div>
+    </div>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-light btn-sm btn-rules" data-toggle="modal" data-target="#exampleModal">
+      Rules
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Three Simple Rules</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ol>
+              <li>Player who is first to reach 100 point will be the winner.</li>
+              <li>If the dice rolls to 1, the current score will go back to zero and other player gets chance to play.</li>
+              <li>Clicking hold automatically transfer the round(current) score to main score and the other player gets chance to play.</li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+    <script type="text/javascript" src="assets/js/main.js"> </script>
+
+  </body>
+</html>
