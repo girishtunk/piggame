@@ -1,0 +1,11 @@
+{
+  "name": "PIG Game",
+  "version": "0.1",
+  "scripts": {
+    "deploy":"gh-pages -d base"
+  },
+  "dependencies": {
+    "homepage":"https://girishtunk.github.io/piggame",
+    "gh-pages": "^2.0.1"
+  }
+}
